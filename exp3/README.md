@@ -50,11 +50,11 @@ kp_a, des_a = sift.detectAndCompute(gray_a, None)
 kp_b, des_b = sift.detectAndCompute(gray_b, None)
 ```
 
-![SIFT关键点检测](output/keypoints_a.jpg)
+![SIFT关键点检测](img/keypoints_a.jpg)
 
 *图1  图像 a 的 SIFT 关键点分布*
 
-![SIFT关键点检测](output/keypoints_b.jpg)
+![SIFT关键点检测](img/keypoints_b.jpg)
 
 *图2  图像 b 的 SIFT 关键点分布*
 
@@ -106,7 +106,7 @@ for m, n in matches:
 
 结果：经过 Lowe's 比率测试，从 7022 组初始匹配中筛选出 66 对优质匹配，保留率为 0.94%。这些优质匹配的最近邻距离显著小于次近邻距离，具有更高的可靠性。
 
-![匹配关键点](result/matched_keypoints.jpg)
+![匹配关键点](img/matched_keypoints.jpg)
 
 *图3  筛选后的优质匹配关键点对*
 
@@ -197,7 +197,7 @@ stitched_img[-y_min : h_a - y_min, -x_min : w_a - x_min] = img_a
 
 结果：透视变换与拼接耗时 0.007 秒，生成 1673×1344 的全景图像。拼接后的图像包含了两张原图的所有可见内容。
 
-![拼接结果](result/stitched_result.jpg)
+![拼接结果](img/stitched_result.jpg)
 
 *图4  最终全景拼接结果*
 
